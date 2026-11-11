@@ -6,26 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokéZona</title>
 
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
-
 <body>
     <header>
         <h1>PokéZona</h1>
         <p>Tienda de mercancía Pokémon</p>
+        <a href="admin/login.php">Acceso administrador</a>
     </header>
-
     <main>
-
         <h2>Nuestros productos</h2>
 
         <div id="productos">
             Cargando productos...
         </div>
-
     </main>
 
-    <script src="js/producto.js"></script>
-</body>
+    <section>
+        <h2>Mi carrito</h2>
 
+        <div id="carrito">
+            Tu carrito está vacío.
+        </div>
+
+        <h3>Total: <span id="totalCarrito">$0.00 MXN</span></h3>
+
+        <h2>Datos para realizar el pedido</h2>
+
+        <form id="formularioPedido">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" required maxlength="100">
+
+            <label>Correo electrónico:</label>
+            <input type="email" name="correo" required maxlength="150">
+
+            <label>Teléfono:</label>
+            <input type="tel" name="telefono" maxlength="20">
+
+            <label>Observaciones:</label>
+            <textarea name="observaciones"></textarea>
+
+            <button type="submit">Confirmar pedido</button>
+        </form>
+
+        <p id="mensajePedido"></p>
+    </section>
+
+    <script src="js/carrito.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/pedido.js"></script>
+</body>
 </html>

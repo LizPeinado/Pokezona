@@ -1,10 +1,6 @@
-
 async function cargarProductos() {
-
     const contenedor = document.getElementById("productos");
-
     try {
-
         const respuesta = await fetch("api/productos.php");
 
         if (!respuesta.ok) {
@@ -12,13 +8,18 @@ async function cargarProductos() {
         }
 
         const productos = await respuesta.json();
-
         contenedor.innerHTML = "";
 
         productos.forEach(producto => {
 
-            const tarjeta = document.createElement("div");
+            const boton = document.createElement("button");
+            boton.textContent = "Agregar al carrito";
 
+            boton.addEventListener("click", () => {
+                agregarCarrito(producto);
+            });
+
+            const tarjeta = document.createElement("div");
             tarjeta.className = "producto";
 
             const imagen = document.createElement("img");
@@ -46,11 +47,11 @@ async function cargarProductos() {
                 descripcion,
                 categoria,
                 precio,
-                existencia
+                existencia,
+                boton
             );
 
             contenedor.appendChild(tarjeta);
-
         });
 
         if (productos.length === 0) {
@@ -58,13 +59,9 @@ async function cargarProductos() {
         }
 
     } catch (error) {
-
         contenedor.textContent = "No se pudieron cargar los productos.";
-
         console.error(error);
-
     }
-
 }
 
 cargarProductos();

@@ -1,6 +1,4 @@
-
 <?php
-
 header("Content-Type: application/json; charset=UTF-8");
 
 require_once "../php/conexion.php";
@@ -31,7 +29,6 @@ try {
         JSON_UNESCAPED_UNICODE |
         JSON_PRETTY_PRINT
     );
-
 } catch (PDOException $error) {
     http_response_code(500);
 
@@ -39,5 +36,4 @@ try {
         "error" => "Error al consultar los productos"
     ]);
 }
-
 ?>
