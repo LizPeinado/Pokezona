@@ -38,7 +38,7 @@ formulario.addEventListener("submit", async function(evento) {
             "¡Pedido #" + resultado.id_pedido +
             " registrado! Total: $" +
             Number(resultado.total).toFixed(2) +
-            " MXN. Recoge tu pedido en tienda.";
+            " MXN. Pasa a pagar en tienda para confirmar tu pedido.";
 
         // Vaciar carrito
         carrito = [];

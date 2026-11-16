@@ -20,7 +20,7 @@ async function cargarProductos() {
             });
 
             const tarjeta = document.createElement("div");
-            tarjeta.className = "producto";
+            tarjeta.className = "tarjeta";
 
             const imagen = document.createElement("img");
             imagen.src = producto.imagen || "";
@@ -32,8 +32,7 @@ async function cargarProductos() {
             const descripcion = document.createElement("p");
             descripcion.textContent = producto.descripcion || "";
 
-            const categoria = document.createElement("p");
-            categoria.textContent = "Categoría: " + producto.categoria;
+            
 
             const precio = document.createElement("p");
             precio.textContent = "$" + producto.precio + " MXN";
@@ -45,7 +44,6 @@ async function cargarProductos() {
                 imagen,
                 nombre,
                 descripcion,
-                categoria,
                 precio,
                 existencia,
                 boton

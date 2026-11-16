@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - PokéZona</title>
+
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/paginas.css">
+</head>
+<!-- Google Analytics - PokéZona -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BS5MVS1ZKK"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BS5MVS1ZKK');
+</script>
+<body>
+    <header>
+        <h1>CARRITO</h1>
+        <div class="menu-contenedor">
+            <button class="boton-menu" onclick="mostrarMenu()">
+                <img src="imagenes/pokeball.png" alt="Menú">
+            </button>
+
+            <nav id="menu" class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="carrito.html">Carrito</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="productos.html">Productos</a>
+                <a href="admin/login.php">Log in</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <p>Los pedidos se pagan y se recojen únicamente en tienda. <a href="nosotros.html">Ubicación.</a></p>
+        <div class="barra-roja">
+            <h2>Productos seleccionados</h2>
+        </div>
+
+        <div id="carrito">
+            Tu carrito está vacío.
+        </div>
+
+        <h2>Total: <span id="totalCarrito">$0.00 MXN</span></h2>
+
+        <div class="barra-azul">
+            <h2>Datos para realizar el pedido</h2>
+        </div>
+
+        <form id="formularioPedido" class="formulario">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" maxlength="100" required>
+
+            <label>Correo electrónico:</label>
+            <input type="email" name="correo" maxlength="150" required>
+
+            <label>Teléfono:</label>
+            <input type="tel" name="telefono" maxlength="20">
+
+            <label>Observaciones:</label>
+            <textarea name="observaciones"></textarea>
+
+            <button type="submit">Confirmar pedido</button>
+        </form>
+        <p id="mensajePedido"></p>
+    </main>
+    <footer>
+        <a href="identificacion.html">Copyright © PokéZona | Información del desarrollador</a>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
+</body>
+</html>

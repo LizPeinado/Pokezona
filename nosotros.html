@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - PokéZona</title>
+
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/paginas.css">
+</head>
+<!-- Google Analytics - PokéZona -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BS5MVS1ZKK"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BS5MVS1ZKK');
+</script>
+<body>
+    <header>
+        <h1>NOSOTROS</h1>
+
+        <div class="menu-contenedor">
+            <button class="boton-menu" onclick="mostrarMenu()">
+                <img src="imagenes/pokeball.png" alt="Menú">
+            </button>
+
+            <nav id="menu" class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="carrito.html">Carrito</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="productos.html">Productos</a>
+                <a href="admin/login.php">Log in</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="barra-azul">
+                <h2>Redes sociales</h2>
+            </div>
+
+            <div class="redes">
+                <a href="https://www.instagram.com/?hl=es" target="_blank">
+                    <img src="imagenes/redes/instagram.png" alt="Instagram">
+                    <p>Instagram</p>
+                </a>
+
+                <a href="https://www.youtube.com/?app=desktop&hl=es" target="_blank">
+                    <img src="imagenes/redes/youtube.png" alt="YouTube">
+                    <p>YouTube</p>
+                </a>
+
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank">
+                    <img src="imagenes/redes/facebook.png" alt="Facebook">
+                    <p>Facebook</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="mapa-ubicacion panel-hud">
+            <h2>¿Dónde encontrarnos?</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.0424201584615!2d-106.43573272437932!3d31.742043074113116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea4359ba3469d5%3A0x5fdab3bc5a4f953c!2sUACJ%20IIT-IADA!5e0!3m2!1ses!2smx!4v1794727419197!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+            <a href="https://www.google.com/maps/search/?api=1&query=31.742043074113116,-106.43573272437932" target="_blank" rel="noopener">
+                Ver ubicación en Google Maps
+            </a>
+        </section>
+
+        <section>
+            <div class="barra-verde">
+                <h2>Contacto</h2>
+            </div>
+
+            <div class="panel-hud">
+                <div class="contacto">
+                    <div>
+                        <p>Teléfono celular</p>
+                        <p>656-555-5555</p>
+                        <p>Correo electrónico</p>
+                        <p>PokeZona@gmail.com</p>
+                        <p>Ciudad Juárez, Chihuahua</p>
+                    </div>
+
+                    <div>
+                        <p>Atención a clientes</p>
+                        <a href="https://www.whatsapp.com/?lang=es" target="_blank">
+                            <img src="imagenes/redes/wasap.png" alt="Watsapp">
+                        </a>
+                        <p></p>
+                        <a href="mailto:contacto@pokezona.com">Enviar correo</a>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <a href="identificacion.html">Copyright © PokéZona | Información del desarrollador</a>
+    </footer>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>

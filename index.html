@@ -1,59 +1,103 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PokéZona</title>
+    <title>PokéZona - Inicio</title>
 
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/paginas.css">
 </head>
+<!-- Google Analytics - PokéZona -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BS5MVS1ZKK"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BS5MVS1ZKK');
+</script>
 <body>
     <header>
         <h1>PokéZona</h1>
-        <p>Tienda de mercancía Pokémon</p>
-        <a href="admin/login.php">Acceso administrador</a>
+
+        <div class="menu-contenedor">
+            <button class="boton-menu" onclick="mostrarMenu()">
+                <img src="imagenes/pokeball.png" alt="Menú">
+            </button>
+
+            <nav id="menu" class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="carrito.html">Carrito</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="productos.html">Productos</a>
+                <a href="admin/login.php">Log in</a>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <h2>Nuestros productos</h2>
+        <!-- Carrusel principal -->
 
-        <div id="productos">
-            Cargando productos...
-        </div>
+        <section class="carrusel">
+            <div class="imagenes-carrusel" id="imagenesCarrusel">
+                <img src="imagenes/carrusel/imagen1.jpg" alt="Pokémon 1">
+                <img src="imagenes/carrusel/imagen2.jpg" alt="Pokémon 2">
+                <img src="imagenes/carrusel/imagen3.jpg" alt="Pokémon 3">
+                <img src="imagenes/carrusel/imagen4.jpg" alt="Pokémon 4">
+                <img src="imagenes/carrusel/imagen5.jpg" alt="Pokémon 5">
+            </div>
+
+            <button class="flecha anterior" onclick="cambiarImagen(-1)">❮</button>
+            <button class="flecha siguiente" onclick="cambiarImagen(1)">❯</button>
+
+            <div class="indicadores" id="indicadores"></div>
+        </section>
+
+        <!-- Productos por categoría -->
+
+        <section id="seccionCategorias">
+            <div id="categorias">
+                Cargando productos...
+            </div>
+
+            <p class="centrado">
+                <a href="productos.html">Ver todos los productos</a>
+            </p>
+        </section>
+
+        <!-- Visítanos -->
+
+        <section class="panel">
+            <div class="centrado">
+                <h1>VISÍTANOS</h1>
+            </div>
+        
+            <div class="visita-contenido">
+                <div>
+                    <h3>Dirección</h3>
+                    <p>Ciudad Juárez, Chihuahua</p>
+                    <p>Recoge tu pedido en tienda.</p>
+                </div>
+
+                <div>
+                    <h3>Contacto</h3>
+                    <p>Consulta nuestras redes sociales.</p>
+                    <a href="nosotros.html">Más información</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="barra-azul">
+            <h2>Redes sociales</h2>
+            <a href="nosotros.html">Conócenos</a>
+        </section>
     </main>
+    <footer>
+        <a href="identificacion.html">Copyright © PokéZona | Información del desarrollador</a>
+    </footer>
 
-    <section>
-        <h2>Mi carrito</h2>
-
-        <div id="carrito">
-            Tu carrito está vacío.
-        </div>
-
-        <h3>Total: <span id="totalCarrito">$0.00 MXN</span></h3>
-
-        <h2>Datos para realizar el pedido</h2>
-
-        <form id="formularioPedido">
-            <label>Nombre:</label>
-            <input type="text" name="nombre" required maxlength="100">
-
-            <label>Correo electrónico:</label>
-            <input type="email" name="correo" required maxlength="150">
-
-            <label>Teléfono:</label>
-            <input type="tel" name="telefono" maxlength="20">
-
-            <label>Observaciones:</label>
-            <textarea name="observaciones"></textarea>
-
-            <button type="submit">Confirmar pedido</button>
-        </form>
-
-        <p id="mensajePedido"></p>
-    </section>
-
-    <script src="js/carrito.js"></script>
-    <script src="js/productos.js"></script>
-    <script src="js/pedido.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/inicio.js"></script>
 </body>
 </html>

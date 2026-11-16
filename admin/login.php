@@ -8,6 +8,15 @@
 
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
+<!-- Google Analytics - PokéZona -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BS5MVS1ZKK"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BS5MVS1ZKK');
+</script>
 <body>
     <header>
         <h1>PokéZona</h1>
@@ -26,6 +35,7 @@
         </form>
 
         <p><a href="../index.html">Volver a la tienda</a></p>
+        <p><a href="panel.php">Ver panel</a></p>
     </main>
 </body>
 </html>

@@ -24,7 +24,7 @@ if (!isset($_SESSION["admin"])) {
     </header>
     <main>
         <h2>Bienvenido, <?php echo htmlspecialchars($_SESSION["admin"]); ?></h2>
-        <p>Has iniciado sesión correctamente.</p>
+        <p>Desde aquí se podrán gestionar los productos y pedidos.</p>
         <h3>Administración de la tienda</h3>
 
         <p>
@@ -36,11 +36,7 @@ if (!isset($_SESSION["admin"])) {
         <p>
             <a href="../index.html">Ver tienda pública</a>
         </p>
-
-        <p>Desde aquí se podrán gestionar los productos y pedidos.</p>
-
-        <p><a href="../index.html">Ver tienda pública</a></p>
-
+        
         <p><a href="cerrar_sesion.php">Cerrar sesión</a></p>
     </main>
 </body>

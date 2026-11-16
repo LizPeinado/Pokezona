@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - PokéZona</title>
+
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/paginas.css">
+</head>
+<!-- Google Analytics - PokéZona -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BS5MVS1ZKK"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BS5MVS1ZKK');
+</script>
+<body>
+    <header>
+        <h1>PRODUCTOS</h1>
+
+        <div class="menu-contenedor">
+            <button class="boton-menu" onclick="mostrarMenu()">
+                <img src="imagenes/pokeball.png" alt="Menú">
+            </button>
+
+            <nav id="menu" class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="carrito.html">Carrito</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="productos.html">Productos</a>
+                <a href="admin/login.php">Log in</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="barra-roja">
+            <h2>Catálogo de productos</h2>
+        </div>
+
+        <div id="productos" class="catalogo">
+            Cargando productos...
+        </div>
+    </main>
+
+    <footer>
+        <a href="identificacion.html">Copyright © PokéZona | Información del desarrollador</a>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/productos.js"></script>
+</body>
+</html>
